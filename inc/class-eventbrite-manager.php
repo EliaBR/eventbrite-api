@@ -335,6 +335,10 @@ class Eventbrite_Manager {
 					'created_asc',
 					'created_desc',
 				),
+				'show_series_parent' => array(
+					true,
+					false,
+				),
 			),
 		);
 
