@@ -112,6 +112,9 @@ class Eventbrite_Manager {
 		}
 		unset( $params['page'] );
 
+		// The 'locale' parameter is valid for any endpoint
+		unset( $params['locale'] );
+
 		// Compare each passed parameter and value against our valid ones, and fail if a match can't be found.
 		foreach ( $params as $key => $value ) {
 			// Check the parameter is valid for that endpoint.
