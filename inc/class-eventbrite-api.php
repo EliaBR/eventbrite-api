@@ -93,6 +93,10 @@ class Eventbrite_API extends Keyring_Service_Eventbrite {
 			$endpoint_url = trailingslashit( $endpoint_url . absint( $object_id ) );
 		}
 
+		if ( ! isset( $query_params['locale'] ) ) {
+			$query_params['locale'] = get_locale();
+		}
+
 		if ( 'GET' == $method ) {
 			$endpoint_url = add_query_arg( $query_params, $endpoint_url );
 		} else if ( 'POST' == $method ) {
